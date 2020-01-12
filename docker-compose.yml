@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  heroes-node-api:
+    image: dev-node-api
+    build: .
+    environment:
+      NODE_ENV: production
+    restart: always
+    ports:
+      - 7777:7777
+    command: npm start
